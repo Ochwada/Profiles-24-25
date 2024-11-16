@@ -1,11 +1,8 @@
 
 // src/Components/Constant/index.js
 
-import { title } from "process";
 
-
-
-// Header Navigation
+// -------------------------------------------Header Navigation --------------------
 export const navigation = [
     {
         id: 1,
@@ -29,6 +26,32 @@ export const navigation = [
         href: "/projects",
     },
 
+];
+// -------------------------------------------Projects Navigation --------------------
+
+export const projectsNavigation = [
+    {
+        id: 1,        
+        name: "My Profile November 2024 ",
+        git_href: "https://ochwada.github.io/profile_nov2024/",
+        web_href: "https://linda-ochwada.netlify.app/",
+        href: "projects/profile_nov2024",
+        image:'/assets/dddepth.jpg',
+        category: "Web Development",
+        subcategory: "Frontend",
+        tools: ["#React", "#TailwindCSS", "#NextJS"],
+    },
+    {
+        id: 2,        
+        name: "My Profile November 2023 ",
+        git_href: "https://ochwada.github.io/profile_nov2024/",
+        web_href: "https://linda-ochwada.netlify.app/",
+        href: "projects/profile_nov2024",
+        image:'/assets/dddepth.jpg',
+        category: "Web Development",
+        subcategory: "Fullstack",
+        tools: ["#React", "#scss", "#Sanity",],
+    },
 ];
 
 // --------------- Experience Page ---------------------------
