@@ -17,7 +17,7 @@
 body {
   color: var(--foreground);
   background-color: var(--background);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
   font-family: "Space Grotesk", sans-serif;
 }
 
@@ -70,7 +70,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.20; /* Set the SVG background opacity to 50% */
+  opacity: 0.09; /* Set the SVG background opacity to 50% */
   z-index: -1; /* Ensure it stays behind the main content */
 }
 .comp-img {
@@ -160,6 +160,56 @@ header {
   height: 4.5rem;
 
 }
+/*------------------------------- Timeline & Experience ------------------------------*/
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 51.2%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: rgba(136, 133, 133, 0.2); /* Gray-300 with 20% opacity */
+  transform: translateX(-50%);
+}
+@media (max-width: 640px) {
+  .timeline::before {
+    display: none; /* Hide the line on mobile screens */
+  }
+}
+.experience-background {
+  position: relative;
+}
+
+.experience-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/dddepth-2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2; /* Set the SVG background opacity to 50% */
+  z-index: -1; /* Ensure it stays behind the main content */
+}
+
+.hover\:shadow-multicolor:hover {
+  box-shadow: 0 2px 20px rgba(118, 6, 118, 0.5), /* Purple */
+              0 4px 80px rgba(0, 128, 0, 0.5),    /* Green */
+              0 1px 40px rgba(245, 113, 174, 0.5), /* Pink */
+              0 4px 60px rgba(31, 173, 173, 0.5);    /* Blue */
+  border: 1px solid transparent; /* Remove original border */
+}
+
+
 /*------------------------------- Scrolling Bar ------------------------------*/
 
 .progress-bar {

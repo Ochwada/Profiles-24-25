@@ -13,7 +13,7 @@ const Competence: React.FC = () => {
     //const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
 
     return (
-        <div className="flex flex-col min-h-screen competence-background">
+        <div className="flex flex-col min-h-screen competence-background items-center justify-center">
             {/* Fixed Header */}
             <div className="fixed top-0 left-0 w-full z-50">
                 <Header />
