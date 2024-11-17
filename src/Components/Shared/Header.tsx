@@ -29,12 +29,15 @@ const Header: React.FC = () => {
             <div className="flex items-center justify-between max-w-7xl mx-auto p-4">
                 {/* Left - Logo */}
                 <div className="flex items-center">
-                    <Link href="/" className="flex items-center">
+                    <Link href="/" className="text-mypink text-2xl ibm-plex-mono-bold flex items-center">
                         <Image
-                            src={assets.logo}
+                            src="/assets/logo.png"
                             alt="Logo"
+                            width={56}
+                            height={56}
                             className="h-14 w-auto"
                         />
+                        Ochwada
                     </Link>
                 </div>
 

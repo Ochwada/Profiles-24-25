@@ -40,27 +40,27 @@ const Footer: React.FC = () => {
                         rel={media.rel}
                         aria-label={media.ariaLabel}
                         className="hover:text-mydarkpurple text-mypurple hover:shadow-[0px_4px_8px_rgba(126,96,191,0.5)]" // Apply hover shadow to all icons
-                        >
+                    >
                         {/* Render Icons Based on Social Media Name */}
 
                         {media.name === "LinkedIn" && <LinkedInIcon className="w-auto h-6" />}
                         {media.name === "GitHub" && <GitHubIcon className="w-auto h-6" />}
                         {media.name === "Medium" && (
-                            <Image 
-                             src="/images/socialMedia/Medium.svg"
-                            alt="Medium" 
-                            width={24} 
-                            height={24} 
-                            className="medium-icon"
+                            <Image
+                                src="/images/socialMedia/Medium.svg"
+                                alt="Medium"
+                                width={24}
+                                height={24}
+                                className="medium-icon"
                             />
                         )}
                         {media.name === "Dev.to" && (
-                            <Image 
-                            src="/images/socialMedia/Dev.svg" 
-                            alt="Dev.to" 
-                            width={24} 
-                            height={24} 
-                            className="medium-icon"
+                            <Image
+                                src="/images/socialMedia/Dev.svg"
+                                alt="Dev.to"
+                                width={24}
+                                height={24}
+                                className="medium-icon"
                             />
                         )}
 
