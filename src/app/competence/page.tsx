@@ -13,15 +13,16 @@ const Competence: React.FC = () => {
     //const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
 
     return (
-        <div className="flex flex-col min-h-screen competence-background items-center justify-center">
-            {/* Fixed Header */}
-            <div className="fixed top-0 left-0 w-full z-50">
-                <Header />
-            </div>
+        <PageTransition>
+            <div className="flex flex-col min-h-screen competence-background">
+                {/* Fixed Header */}
+                <div className="fixed top-0 left-0 w-full z-50">
+                    <Header />
+                </div>
 
-            {/* Page Content */}
-            <div className="flex-grow pt-16 pb-16">
-                <PageTransition>
+                {/* Page Content */}
+                <div className="flex-grow pt-16 pb-16 place-content-center">
+
                     {/* Progress Bar */}
                     <motion.div
                         className="progress-bar fixed top-16 left-0 w-full h-1 bg-mydarkpurple z-40"
@@ -29,7 +30,7 @@ const Competence: React.FC = () => {
                     />
 
                     {/* Main Content */}
-                    <div className="p-4 sm:p-8 pb-32 mx-8 mt-6">
+                    <div className="p-4 sm:p-8 pb-32 mx-8 ">
                         <h1 className=" md:text-4xl text-2xl font-bold text-start mb-8">
                             What are  areas of  my<span className="text-mypink"> expertise </span>?
                         </h1>
@@ -68,14 +69,15 @@ const Competence: React.FC = () => {
                             ))}
                         </div>
                     </div>
-                </PageTransition>
-            </div>
 
-            {/* Fixed Footer */}
-            <div className="fixed bottom-0 left-0 w-full z-50">
-                <Footer />
+                </div>
+
+                {/* Fixed Footer */}
+                <div className="fixed bottom-0 left-0 w-full z-50">
+                    <Footer />
+                </div>
             </div>
-        </div>
+        </PageTransition>
     );
 };
 

@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import { motion, useScroll } from "framer-motion";
+import Image from 'next/image';
+
 
 import PageTransition from "@/Components/Pages/PageTransition";
 import Header from "@/Components/Shared/Header";
@@ -26,9 +28,11 @@ const toolColors: Record<string, { bg: string; text: string }> = {
     
 };
 
+
+
 const ProjectCard: React.FC<{ project: typeof projectsNavigation[0]; onToolClick: (tool: string) => void }> = ({ project, onToolClick }) => (
     <div className="mt-8 border border-dashed border-gray-500/[0.5] rounded p-2 m-2 shadow-lg hover:shadow-purple-500/50 transition-shadow duration-400">
-        <img
+        <Image
             src={project.image}
             alt={project.name}
             className="w-full h-32 object-cover rounded-md mb-4 opacity-80"
@@ -170,7 +174,11 @@ const Projects: React.FC = () => {
                             </span>
                         </h1>
                         <p className="opacity-80 m-8  text-lg ibm">
-                        Welcome to - A Journey Through My Projects - You will find a selection of my work right here, each representing the passion and commitment I put into it. Each project highlights particular difficulties overcame and abilities improved. They show off my skills on their own, but when combined, they show how far I've come as a professional. I encourage you to look over these achievements, which show my dedication to lifelong learning and the pursuit of excellence.
+                        Welcome to - A Journey Through My Projects - You will find a selection of my work right here, each representing 
+                        the passion and commitment I put into it. Each project highlights particular difficulties overcame 
+                        and abilities improved. They show off my skills on their own, but when combined, they show how far I&apos;ve come as 
+                        a professional. I encourage you to look over these achievements, which show my dedication to lifelong learning 
+                        and the pursuit of excellence.
                         </p>
 
                         {/* Category Tabs */}

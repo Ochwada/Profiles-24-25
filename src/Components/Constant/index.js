@@ -1,6 +1,6 @@
 
 // src/Components/Constant/index.js
-
+import React from 'react';
 
 // -------------------------------------------Header Navigation --------------------
 export const navigation = [
@@ -31,56 +31,56 @@ export const navigation = [
 
 export const projectsNavigation = [
     {
-        id: "ardhiapp",        
+        id: "ardhiapp",
         name: "Ardhi Project - GIS Data Visualization and Conversion tool (Application)",
         git_href: "https://github.com/Ardhi-OWM/ardhi_frontend",
         //web_href: "https://ardhi.de/",
         href: "https://ardhi.slab.com/posts/what-is-ardhi-project-z0d01cz8?shr=EZiIPCLM0lt9h1C_2osUBQA_",
-        image:'/assets/ardhi_app.png',
+        image: '/assets/ardhi_app.png',
         category: ["Web Development", "Project Management"],
         subcategory: "Frontend",
         tools: ["#React", "#TailwindCSS", "#NextJS"],
     },
     {
-        id: "ardhi",        
+        id: "ardhi",
         name: "Ardhi Project - GIS Data Visualization and Conversion tool (Landing Page)",
         git_href: "https://github.com/Ardhi-OWM/landing-page",
         web_href: "https://ardhi.de/",
         href: "https://ardhi.slab.com/posts/what-is-ardhi-project-z0d01cz8?shr=EZiIPCLM0lt9h1C_2osUBQA_",
-        image:'/assets/ardhi.png',
+        image: '/assets/ardhi.png',
         category: ["Web Development"],
         subcategory: "Frontend",
         tools: ["#React", "#TailwindCSS", "#Vite"],
     },
     {
-        id: 'ProjectsProfile2023',        
+        id: 'ProjectsProfile2023',
         name: "Curriculum vitae - Portfolio (May 2023)",
         git_href: "https://github.com/Ochwada/My-Profile-CV-2023/tree/main/Ochwada_Profile_May2023",
-        web_href: "https://linda-ochwada.netlify.app/",
+        web_href: "https://ochwada-pro-23.netlify.app/",
         //href: "https://medium.com/@ochwada/c-programing-setup-in-visual-studio-code-bd4cb60e58ff",
-        image:'/assets/profile0523.png',
+        image: '/assets/profile0523.png',
         category: ["Web Development"],
         subcategory: "Frontend",
-        tools: ["#React", "#Vite","#ThreeJS", "#TailwindCSS", '#Netlify', ],
+        tools: ["#React", "#Vite", "#ThreeJS", "#TailwindCSS", '#Netlify',],
     },
     {
-        id: 'clvprediction',        
+        id: 'clvprediction',
         name: "Customer Lifetime Value Prediction",
         git_href: "https://github.com/Ochwada/Software_Code_Pytho",
         //web_href: "https://linda-ochwada.netlify.app/",
         //href: "https://medium.com/@ochwada/c-programing-setup-in-visual-studio-code-bd4cb60e58ff",
-        image:'/assets/clv.png',
+        image: '/assets/clv.png',
         category: ["Machine Learning"],
         subcategory: "Predictive Analytics",
         tools: ["#Python",],
     },
     {
-        id: 'PhotosIntoCartoons1',        
+        id: 'PhotosIntoCartoons1',
         name: "Turn Photos into Cartoons",
         git_href: "https://github.com/Ochwada/Data-Science-2023/blob/main/Photos%20into%20Cartoons/photo_to_catoons.ipynb",
         //web_href: "https://linda-ochwada.netlify.app/",
         href: "https://medium.com/@ochwada/c-programing-setup-in-visual-studio-code-bd4cb60e58ff",
-        image:'/assets/catoon.png',
+        image: '/assets/catoon.png',
         category: ["Computer Vision"],
         subcategory: "Image Processing and Transformation",
         tools: ["#Python",],
@@ -153,7 +153,7 @@ export const trainingData = [
         description: "Google- Coursera",
         certificateLink: "https://www.coursera.org/account/accomplishments/records/HFW84NV488JL"
     },
-   
+
 ];
 // ------ Experience Section  
 export const experienceData = [
@@ -191,9 +191,11 @@ export const experienceData = [
         description: [
             "Lead and managed projects in geodata, web, and apps.",
             "Led international teams to deliver client-focused results.  ",
-            <a href="https://buymeacoffee.com/ochwada/e/203469" target="_blank" rel="noopener noreferrer">
-                Author of <u>Free Geospatial Data Resources (Ebook)</u>
-            </a>
+            <React.Fragment key="free-geospatial-data-resources">
+                Author of <a href="https://buymeacoffee.com/ochwada/e/203469" target="_blank" rel="noopener noreferrer">
+                    <u>Free Geospatial Data Resources (Ebook)</u>
+                </a>
+            </React.Fragment>
         ],
         //companylink: "https://www.dealcode.ai/"
     },

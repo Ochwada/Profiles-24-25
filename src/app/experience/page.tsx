@@ -9,10 +9,34 @@ import Header from "@/Components/Shared/Header";
 import Footer from "@/Components/Shared/Footer";
 import { experienceData, educationData, trainingData } from "@/Components/Constant";
 
+// Define TypeScript Interfaces for the data
+interface ExperienceItem {
+    position: string;
+    company: string;
+    date: string;
+    description?: (string | React.JSX.Element)[];
+    companylink?: string;
+}
+
+interface EducationItem {
+    title: string;
+    institution: string;
+    date: string;
+    description?: string;
+}
+
+interface TrainingItem {
+    training: string;
+    date: string;
+    description?: string;
+    certificateLink?: string;
+}
+
+
 const Timeline: React.FC = () => {
     const { scrollYProgress } = useScroll();
 
-    const renderExperienceItem = (item: any, index: number): JSX.Element => (
+    const renderExperienceItem = (item: ExperienceItem, index: number): JSX.Element => (
         <div
             key={`experience-${index}`}
             className={`relative flex flex-col sm:flex-row items-center sm:items-start mb-8 sm:mb-[-40px] ${index % 2 === 0 ? "" : "sm:flex-row-reverse"
@@ -37,8 +61,8 @@ const Timeline: React.FC = () => {
                 <p className="text-sm sm:text-base text-gray-400">{item.company}</p>
                 <p className="text-sm sm:text-base text-gray-500 mt-2">{item.date}</p>
                 <ul className="mt-4 text-sm sm:text-base list-disc list-inside">
-                    {item.description && item.description.map((desc: string, idx: number) => (
-                        <li key={idx}>{desc}</li>
+                    {item.description?.map((desc, idx) => (
+                        <li key={`desc-${idx}`}>{desc}</li>
                     ))}
                     {item.companylink && (
                         <li>
@@ -64,7 +88,7 @@ const Timeline: React.FC = () => {
     );
 
 
-    const renderEducationItem = (item: any, index: number): JSX.Element => (
+    const renderEducationItem = (item: EducationItem, index: number): JSX.Element => (
         <div
             key={`education-${index}`}
             className={`relative flex flex-col sm:flex-row items-center sm:items-start mb-8 sm:mb-[-40px] ${index % 2 === 0 ? "" : "sm:flex-row-reverse"
@@ -99,7 +123,7 @@ const Timeline: React.FC = () => {
         </div>
     );
 
-    const renderTrainingItem = (item: any, index: number): JSX.Element => (
+    const renderTrainingItem = (item: TrainingItem, index: number): JSX.Element => (
         <div
             key={`training-${index}`}
             className={`relative flex flex-col sm:flex-row items-center sm:items-start mb-8 sm:mb-[-40px] ${index % 2 === 0 ? "" : "sm:flex-row-reverse"

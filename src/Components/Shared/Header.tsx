@@ -1,7 +1,7 @@
 "use client";
 
 
-import React, { useContext, useState} from 'react';
+import React, { useState} from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import ThemeToggleButton from './ThemeToggleButton';
