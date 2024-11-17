@@ -1,7 +1,6 @@
 "use client";
 
-
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import ThemeToggleButton from './ThemeToggleButton';
@@ -13,10 +12,10 @@ import { useTheme } from './ThemeContext';
 const Header: React.FC = () => {
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
     const pathname = usePathname();
-    const { theme } = useTheme(); // Access the theme context
+    const { theme } = useTheme();
 
     const toggleMobileNav = () => {
-        setIsMobileNavOpen((prev: boolean) => !prev);
+        setIsMobileNavOpen(!isMobileNavOpen);
     };
 
     return (
@@ -26,38 +25,40 @@ const Header: React.FC = () => {
             }`}
         >
             <div className="flex items-center justify-between max-w-7xl mx-auto p-4">
-                {/* Left - Logo */}
+                {/* Logo */}
                 <div className="flex items-center">
-                    <Link href="/" className="text-mypink text-2xl ibm-plex-mono-bold flex items-center">
-                        <Image
-                            src="/assets/logo.png"
-                            alt="Logo"
-                            width={56}
-                            height={56}
-                            className="h-14 w-auto"
-                        />
-                        Ochwada
+                    <Link href="/">
+                        <button className="text-mypink text-2xl ibm-plex-mono-bold flex items-center">
+                            <Image
+                                src="/assets/logo.png"
+                                alt="Logo"
+                                width={56}
+                                height={56}
+                                className="h-14 w-auto"
+                            />
+                            Ochwada
+                        </button>
                     </Link>
                 </div>
 
-                {/* Center - Desktop Navigation Links */}
+                {/* Navigation */}
                 <nav className="hidden md:flex space-x-6 mx-auto">
                     {navigation.map((item) => (
-                        <Link
-                            key={item.id}
-                            href={item.href}
-                            className={`ibm-plex-mono-semibold text-lg font-semibold tracking-wide px-3 ${
-                                pathname === item.href
-                                    ? 'border-b-2 border-mypurple text-mypurple'
-                                    : 'hover:border-b hover:text-mypurple'
-                            }`}
-                        >
-                            {item.name}
+                        <Link key={item.id} href={item.href}>
+                            <button
+                                className={`ibm-plex-mono-semibold text-lg font-semibold tracking-wide px-3 ${
+                                    pathname === item.href
+                                        ? 'border-b-2 border-mypurple text-mypurple'
+                                        : 'hover:border-b hover:text-mypurple'
+                                }`}
+                            >
+                                {item.name}
+                            </button>
                         </Link>
                     ))}
                 </nav>
 
-                {/* Right - Theme Toggle Button and Mobile Navigation */}
+                {/* Theme Toggle and Mobile Navigation */}
                 <div className="flex items-center space-x-4">
                     <ThemeToggleButton />
                     <MobileNav isOpen={isMobileNavOpen} toggleNav={toggleMobileNav} />
@@ -68,4 +69,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-
