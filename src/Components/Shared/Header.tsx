@@ -7,7 +7,6 @@ import { usePathname } from 'next/navigation';
 import ThemeToggleButton from './ThemeToggleButton';
 import { navigation } from '@/Components/Constant';
 import Image from 'next/image';
-import assets from '@/assets';
 import MobileNav from './MobileNav';
 import { useTheme } from './ThemeContext';
 
