@@ -59,9 +59,11 @@ const Header: React.FC = () => {
                 </nav>
 
                 {/* Theme Toggle and Mobile Navigation */}
-                <div className="flex md:hidden items-center space-x-4">
+                <div className="flex  items-center space-x-4">
                     <ThemeToggleButton />
+                    <div className=' md:hidden '> 
                     <MobileNav isOpen={isMobileNavOpen} toggleNav={toggleMobileNav} />
+                    </div>
                 </div>
             </div>
         </header>

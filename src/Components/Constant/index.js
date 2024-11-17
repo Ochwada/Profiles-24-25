@@ -56,7 +56,7 @@ export const projectsNavigation = [
         id: 'ProjectsProfile2023',
         name: "Curriculum vitae - Portfolio (May 2023)",
         git_href: "https://github.com/Ochwada/My-Profile-CV-2023/tree/main/Ochwada_Profile_May2023",
-        web_href: "https://ochwada-pro-23.netlify.app/",
+        web_href: "https://ochwada-23.netlify.app/",
         //href: "https://medium.com/@ochwada/c-programing-setup-in-visual-studio-code-bd4cb60e58ff",
         image: '/assets/profile0523.png',
         category: ["Web Development"],
