@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
                         {media.name === "GitHub" && <GitHubIcon className="w-auto h-6" />}
                         {media.name === "Medium" && (
                             <Image
-                                src="/images/socialMedia/Medium.svg"
+                                src="assets/images/socialMedia/Medium.svg"
                                 alt="Medium"
                                 width={24}
                                 height={24}
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
                         )}
                         {media.name === "Dev.to" && (
                             <Image
-                                src="/images/socialMedia/Dev.svg"
+                                src="assets/images/socialMedia/Dev.svg"
                                 alt="Dev.to"
                                 width={24}
                                 height={24}
