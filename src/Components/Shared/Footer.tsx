@@ -8,10 +8,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import assets from '@/assets';
 import Image from 'next/image';
-import DevIcon from '@/assets/SocialMedia/dev.svg';
-import MediumIcon from '@/assets/SocialMedia/Medium.svg';
 
 
 
@@ -48,7 +45,7 @@ const Footer: React.FC = () => {
                         {media.name === "GitHub" && <GitHubIcon className="w-auto h-6" />}
                         {media.name === "Medium" && (
                             <Image 
-                            src={MediumIcon} 
+                            src="/images/socialMedia/Medium.svg"
                             alt="Medium" 
                             width={24} 
                             height={24} 
@@ -57,7 +54,7 @@ const Footer: React.FC = () => {
                         )}
                         {media.name === "Dev.to" && (
                             <Image 
-                            src={DevIcon} 
+                            src="/images/socialMedia/Dev.svg"
                             alt="Dev.to" 
                             width={24} 
                             height={24} 
