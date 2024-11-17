@@ -35,6 +35,7 @@ const ProjectCard: React.FC<{ project: typeof projectsNavigation[0]; onToolClick
         <Image
             src={project.image}
             alt={project.name}
+            layout="responsive"
             width={400} // Adjust the value as per your layout needs
             height={128} // Adjust the value as per your layout needs
             className="w-full h-32 object-cover rounded-md mb-4 opacity-80"
