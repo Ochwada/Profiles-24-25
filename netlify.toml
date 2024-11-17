@@ -1,7 +1,7 @@
 [build]
   command = "npm run build"
   publish = ".next"
-  environment = { NODE_VERSION = "16" } # Adjust based on your app's requirements
+  environment = { NODE_VERSION = "22" } # Adjust based on your app's requirements
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
