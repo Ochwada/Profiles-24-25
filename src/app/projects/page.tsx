@@ -27,7 +27,7 @@ const toolColors: Record<string, { bg: string; text: string }> = {
 };
 
 const ProjectCard: React.FC<{ project: typeof projectsNavigation[0]; onToolClick: (tool: string) => void }> = ({ project, onToolClick }) => (
-    <div className="border border-dashed border-gray-500/[0.5] rounded p-2 shadow-lg hover:shadow-purple-500/50 transition-shadow duration-400">
+    <div className="mt-8 border border-dashed border-gray-500/[0.5] rounded p-2 m-2 shadow-lg hover:shadow-purple-500/50 transition-shadow duration-400">
         <img
             src={project.image}
             alt={project.name}
