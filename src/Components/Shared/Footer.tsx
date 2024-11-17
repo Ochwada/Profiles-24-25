@@ -10,7 +10,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Image from 'next/image';
 /* import MediumIcon from "../../images/socialMedia/Medium.svg";
-import DevIcon from "../../images/socialMedia/Dev.svg */";
+import DevIcon from "../../images/socialMedia/Dev.svg; */
 
 
 
